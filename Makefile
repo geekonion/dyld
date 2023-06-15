@@ -6,7 +6,7 @@ UNAME_M := $(shell uname -m)
 .PHONY: build
 build:
 	@echo "Building dyld_shared_cache_util"
-	xcodebuild -target dyld_shared_cache_util  -sdk macosx11.0 -scheme dyld_shared_cache_util -configuration Debug -arch $(UNAME_M)  ARCHS=$(UNAME_M) ONLY_ACTIVE_ARCH=YES CONFIGURATION_BUILD_DIR=$(DESTDIR)
+	xcodebuild -target dyld_shared_cache_util  -sdk macosx -scheme dyld_shared_cache_util -configuration Debug -arch $(UNAME_M)  ARCHS=$(UNAME_M) ONLY_ACTIVE_ARCH=YES CONFIGURATION_BUILD_DIR=$(DESTDIR)
 
 .PHONY: install
 install:
